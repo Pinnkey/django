@@ -1,0 +1,41 @@
+{% extends 'innertemplate.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>Hi Pinky {{lname}}</h2>
+            <form action="add" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Enter Your Name</label>
+                    <input type="text" class="form-control" name="num1">
+                </div>
+                <div class="form-group">
+                    <label>Enter Your DOB</label>
+                    <input type="text" class="form-control" name="num2">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary text-light btn-round ">Add</button>
+                </div>
+          </form>
+ <!--  <form>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Enter Your Name</label>-->
+<!--                    <input type="text" class="form-control" name="name">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Enter Your DOB</label>-->
+<!--                    <input type="date" class="form-control" name="dob">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label>Enter Your Email</label>-->
+<!--                    <input type="email" class="form-control" name="email">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <button type="submit" class="btn btn-primary text-light btn-round ">Submit</button>-->
+<!--                </div>-->
+<!--            </form>-->
+        </div>
+    </div>
+</div>
+{% endblock %}
